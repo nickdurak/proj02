@@ -15,6 +15,9 @@
  *******************************************************/
 
 #include "employee.h"
+#include <string>
+
+using namespace std;
 
 
 /**
@@ -22,7 +25,7 @@
  */
 Employee::Employee(unsigned int employeeID, string name, unsigned int salary, unsigned int year)
 {
-    m_employeeID = studentID;
+    m_employeeID = employeeID;
     m_name = name;
     m_salary = salary;
     m_year = year;
@@ -33,7 +36,7 @@ Employee::Employee(unsigned int employeeID, string name, unsigned int salary, un
  */
 void Employee::print()
 {
-    cout << std::setprecision(3) << m_employeeID << " " << m_name << " " << m_salary << " " << m_year;
+    cout << m_employeeID << " " << m_name << " " << m_salary << " " << m_year;
 }
 
 

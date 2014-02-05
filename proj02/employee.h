@@ -18,6 +18,9 @@
 #define __proj02__employee__
 
 #include <iostream>
+#include <string>
+
+using std::string;
 
 /**
  Employee
@@ -31,7 +34,7 @@ public:
     /**
      constructor for Employee
      */
-    Employee(int employeeID = 0, string name = "", unsigned int salary = 0, int year = 0);
+    Employee(unsigned int employeeID = 0, string name = "", unsigned int salary = 0, unsigned int year = 0);
     
     /**
      print data stored in Employee
