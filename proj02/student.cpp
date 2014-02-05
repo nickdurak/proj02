@@ -22,7 +22,7 @@
 /**
     constructor for student
  */
-Student::Student(int studentID, string name, int year, float grade)
+Student::Student(unsigned int studentID, string name, unsigned int year, float grade)
 {
     m_studentID = studentID;
     m_name = name;
@@ -42,7 +42,7 @@ void Student::print()
 /**
     constructor for UndergradStudent
  */
-UndergradStudent::UndergradStudent(int studentID, string name, int year, float grade, string major, string minor)
+UndergradStudent::UndergradStudent(unsigned int studentID, string name, unsigned int year, float grade, string major, string minor)
 : Student(studentID, name, year, grade)
 {
     m_major = major;
@@ -62,7 +62,7 @@ void UndergradStudent::print()
 /**
     constructor for GraduateStudent
  */
-GraduateStudent::GraduateStudent(int studentID, string name, int year, float grade, string dep, string advisor)
+GraduateStudent::GraduateStudent(unsigned int studentID, string name, unsigned int year, float grade, string dep, string advisor)
 : Student(studentID, name, year, grade)
 {
     m_dep = dep;

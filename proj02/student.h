@@ -32,7 +32,7 @@ public:
     /**
         constructor for student
      */
-    Student(int studentID = 0, string name = "", int year = 0, float grade = 0.0);
+    Student(unsigned int studentID = 0, string name = "", unsigned int year = 0, float grade = 0.0);
     
     /**
         print data stored in student
@@ -41,9 +41,9 @@ public:
     
 protected:
     
-    int m_studentID;
+    unsigned int m_studentID;
     string m_name;
-    int m_year;
+    unsigned int m_year;
     float m_grade; // GPA
 };
 
@@ -55,7 +55,7 @@ public:
     /**
         constructor for UndergradStudent
      */
-    UndergradStudent(int studentID, string name, int year, float grade, string major, string minor);
+    UndergradStudent(unsigned int studentID, string name, unsigned int year, float grade, string major = "", string minor = "");
     
     /**
         print data stored in UndergradStudent
@@ -77,7 +77,7 @@ public:
     /**
         constructor for GraduateStudent
      */
-    GraduateStudent(int studentID, string name, int year, float grade, string dep, string advisor);
+    GraduateStudent(unsigned int studentID, string name, unsigned int year, float grade, string dep = "", string advisor = "");
     
     /**
         print data stored in GraduateStudent
