@@ -19,13 +19,12 @@
 
 using namespace std;
 
-
 /**
  constructor for Employee
  */
-Employee::Employee(unsigned int employeeID, string name, unsigned int salary, unsigned int year)
+Employee::Employee(unsigned int id, string name, unsigned int salary, unsigned int year)
 {
-    m_employeeID = employeeID;
+    m_id = id;
     m_name = name;
     m_salary = salary;
     m_year = year;
@@ -34,17 +33,28 @@ Employee::Employee(unsigned int employeeID, string name, unsigned int salary, un
 /**
  print data stored in Employee
  */
-void Employee::print()
+void Employee::print() const
 {
-    cout << m_employeeID << " " << m_name << " " << m_salary << " " << m_year;
+    cout << m_id << " " << m_name << " " << m_salary << " " << m_year;
 }
+
+int Employee::getSalary() const
+{
+    return m_salary;
+}
+
+int Employee::getYear() const
+{
+    return m_year;
+}
+
 
 
 /**
  constructor for Faculty
  */
-Faculty::Faculty(unsigned int employeeID, string name, unsigned int salary, unsigned int year, unsigned int numStudents)
-: Employee(employeeID, name, salary, year)
+Faculty::Faculty(unsigned int id, string name, unsigned int salary, unsigned int year, unsigned int numStudents)
+: Employee(id, name, salary, year)
 {
     m_numStudents = numStudents;
 }
@@ -52,7 +62,7 @@ Faculty::Faculty(unsigned int employeeID, string name, unsigned int salary, unsi
 /**
  print data stored in Faculty
  */
-void Faculty::print()
+void Faculty::print() const
 {
     Employee::print();
     cout << " " << m_numStudents << endl;
@@ -62,8 +72,8 @@ void Faculty::print()
 /**
  constructor for Staff
  */
-Staff::Staff(unsigned int employeeID, string name, unsigned int salary, unsigned int year, string dep)
-: Employee(employeeID, name, salary, year)
+Staff::Staff(unsigned int id, string name, unsigned int salary, unsigned int year, string dep)
+: Employee(id, name, salary, year)
 {
     m_dep = dep;
 }
@@ -71,7 +81,7 @@ Staff::Staff(unsigned int employeeID, string name, unsigned int salary, unsigned
 /**
  print data stored in Staff
  */
-void Staff::print()
+void Staff::print() const
 {
     Employee::print();
     cout << " " << m_dep << endl;

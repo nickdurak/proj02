@@ -1,32 +1,12 @@
-/******************************************************
- ** FILE: employee.h
- **
- ** ABSTRACT:
- ** Provides declarations for the Employee, Faculty,
- ** and Staff classes.
- **
- ** AUTHOR:
- ** Nick Durak
- ** Barend Ungrodt
- **
- ** CREATION DATE:
- ** 05/02/2014
- **
- *******************************************************/
-
-#ifndef __proj02__employee__
-#define __proj02__employee__
+#ifndef EMPLOYEE_H
+#define	EMPLOYEE_H
 
 #include <iostream>
-#include <string>
-
-using std::string;
 
 /**
  Employee
- Purpose: create a Employee
+ Purpose: create an Employee
  */
-
 class Employee
 {
 public:
@@ -34,22 +14,28 @@ public:
     /**
      constructor for Employee
      */
-    Employee(unsigned int employeeID = 0, string name = "", unsigned int salary = 0, unsigned int year = 0);
+    Employee(unsigned int id = 0, std::string name = "", unsigned int salary = 0, unsigned int year = 0);
     
     /**
      print data stored in Employee
      */
-    virtual void print();
+    virtual void print() const;
+    
+    int getSalary() const;
+    int getYear() const;
     
 protected:
     
-    int m_employeeID;
-    string m_name;
+    int m_id;
+    std::string m_name;
     unsigned m_salary;
     int m_year; // entrance year
 };
 
-
+/**
+ Employee
+ Purpose: create a faculty Employee
+ */
 class Faculty: public Employee
 {
 public:
@@ -57,12 +43,12 @@ public:
     /**
      constructor for Faculty
      */
-    Faculty(unsigned int employeeID, string name, unsigned int salary, unsigned int year, unsigned int numStudents = 0);
+    Faculty(unsigned int id, std::string name, unsigned int salary, unsigned int year, unsigned int numStudents = 0);
     
     /**
      print data stored in Faculty
      */
-    virtual void print();
+    virtual void print() const;
     
 private:
     unsigned int m_numStudents;
@@ -70,7 +56,10 @@ private:
     
 };
 
-
+/**
+ Employee
+ Purpose: create a staff Employee
+ */
 class Staff: public Employee
 {
 public:
@@ -78,16 +67,19 @@ public:
     /**
      constructor for Staff
      */
-    Staff(unsigned int employeeID, string name, unsigned int salary, unsigned int year, string dep = "");
+    Staff(unsigned int id, std::string name, unsigned int salary, unsigned int year, std::string dep = "");
     
     /**
      print data stored in Staff
      */
-    virtual void print();
+    virtual void print() const;
+
     
 private:
-    string m_dep;
+    std::string m_dep;
 };
 
 
-#endif /* defined(__proj02__employee__) */
+
+#endif	/* EMPLOYEE_H */
+

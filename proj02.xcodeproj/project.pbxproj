@@ -7,19 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20DAF33818A2A2D900282A5F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20DAF33718A2A2D900282A5F /* main.cpp */; };
+		20AF9D7918A81105008C2551 /* input1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20AF9D7718A5419B008C2551 /* input1.txt */; };
+		20AF9D7A18A8110A008C2551 /* input2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20AF9D7818A5419B008C2551 /* input2.txt */; };
+		20B5E39518AC2A4F002EE8B8 /* abstractdatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E38A18AC2A4F002EE8B8 /* abstractdatabase.cpp */; };
+		20B5E39618AC2A4F002EE8B8 /* abstractsort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E38C18AC2A4F002EE8B8 /* abstractsort.cpp */; };
+		20B5E39718AC2A4F002EE8B8 /* employee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E38E18AC2A4F002EE8B8 /* employee.cpp */; };
+		20B5E39818AC2A4F002EE8B8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E39218AC2A4F002EE8B8 /* main.cpp */; };
+		20B5E39918AC2A4F002EE8B8 /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E39318AC2A4F002EE8B8 /* student.cpp */; };
+		20B5E39B18AC2B4C002EE8B8 /* input1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20B5E39018AC2A4F002EE8B8 /* input1.txt */; };
+		20B5E39C18AC2B4C002EE8B8 /* input2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20B5E39118AC2A4F002EE8B8 /* input2.txt */; };
 		20DAF33A18A2A2D900282A5F /* proj02.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20DAF33918A2A2D900282A5F /* proj02.1 */; };
-		20DAF34218A2A31D00282A5F /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20DAF34018A2A31D00282A5F /* student.cpp */; };
-		20DAF34518A2A3DC00282A5F /* employee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20DAF34318A2A3DC00282A5F /* employee.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		20B5E39A18AC2B2C002EE8B8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				20B5E39B18AC2B4C002EE8B8 /* input1.txt in CopyFiles */,
+				20B5E39C18AC2B4C002EE8B8 /* input2.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20DAF33218A2A2D900282A5F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
+				20AF9D7A18A8110A008C2551 /* input2.txt in CopyFiles */,
+				20AF9D7918A81105008C2551 /* input1.txt in CopyFiles */,
 				20DAF33A18A2A2D900282A5F /* proj02.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -27,13 +46,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		20AF9D7718A5419B008C2551 /* input1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input1.txt; sourceTree = "<group>"; };
+		20AF9D7818A5419B008C2551 /* input2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input2.txt; sourceTree = "<group>"; };
+		20B5E38A18AC2A4F002EE8B8 /* abstractdatabase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstractdatabase.cpp; sourceTree = "<group>"; };
+		20B5E38B18AC2A4F002EE8B8 /* abstractdatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstractdatabase.h; sourceTree = "<group>"; };
+		20B5E38C18AC2A4F002EE8B8 /* abstractsort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstractsort.cpp; sourceTree = "<group>"; };
+		20B5E38D18AC2A4F002EE8B8 /* abstractsort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstractsort.h; sourceTree = "<group>"; };
+		20B5E38E18AC2A4F002EE8B8 /* employee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = employee.cpp; sourceTree = "<group>"; };
+		20B5E38F18AC2A4F002EE8B8 /* employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = employee.h; sourceTree = "<group>"; };
+		20B5E39018AC2A4F002EE8B8 /* input1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input1.txt; sourceTree = "<group>"; };
+		20B5E39118AC2A4F002EE8B8 /* input2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input2.txt; sourceTree = "<group>"; };
+		20B5E39218AC2A4F002EE8B8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		20B5E39318AC2A4F002EE8B8 /* student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
+		20B5E39418AC2A4F002EE8B8 /* student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = student.h; sourceTree = "<group>"; };
 		20DAF33418A2A2D900282A5F /* proj02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj02; sourceTree = BUILT_PRODUCTS_DIR; };
-		20DAF33718A2A2D900282A5F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "/Users/njd/Documents/School/CSE 335/proj02/proj02/main.cpp"; sourceTree = "<absolute>"; };
 		20DAF33918A2A2D900282A5F /* proj02.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = proj02.1; sourceTree = "<group>"; };
-		20DAF34018A2A31D00282A5F /* student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
-		20DAF34118A2A31D00282A5F /* student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = student.h; sourceTree = "<group>"; };
-		20DAF34318A2A3DC00282A5F /* employee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = employee.cpp; sourceTree = "<group>"; };
-		20DAF34418A2A3DC00282A5F /* employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = employee.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +93,20 @@
 		20DAF33618A2A2D900282A5F /* proj02 */ = {
 			isa = PBXGroup;
 			children = (
-				20DAF34018A2A31D00282A5F /* student.cpp */,
-				20DAF34118A2A31D00282A5F /* student.h */,
-				20DAF33718A2A2D900282A5F /* main.cpp */,
+				20B5E38A18AC2A4F002EE8B8 /* abstractdatabase.cpp */,
+				20B5E38B18AC2A4F002EE8B8 /* abstractdatabase.h */,
+				20B5E38C18AC2A4F002EE8B8 /* abstractsort.cpp */,
+				20B5E38D18AC2A4F002EE8B8 /* abstractsort.h */,
+				20B5E38E18AC2A4F002EE8B8 /* employee.cpp */,
+				20B5E38F18AC2A4F002EE8B8 /* employee.h */,
+				20B5E39018AC2A4F002EE8B8 /* input1.txt */,
+				20B5E39118AC2A4F002EE8B8 /* input2.txt */,
+				20B5E39218AC2A4F002EE8B8 /* main.cpp */,
+				20B5E39318AC2A4F002EE8B8 /* student.cpp */,
+				20B5E39418AC2A4F002EE8B8 /* student.h */,
+				20AF9D7718A5419B008C2551 /* input1.txt */,
+				20AF9D7818A5419B008C2551 /* input2.txt */,
 				20DAF33918A2A2D900282A5F /* proj02.1 */,
-				20DAF34318A2A3DC00282A5F /* employee.cpp */,
-				20DAF34418A2A3DC00282A5F /* employee.h */,
 			);
 			path = proj02;
 			sourceTree = "<group>";
@@ -86,6 +121,7 @@
 				20DAF33018A2A2D900282A5F /* Sources */,
 				20DAF33118A2A2D900282A5F /* Frameworks */,
 				20DAF33218A2A2D900282A5F /* CopyFiles */,
+				20B5E39A18AC2B2C002EE8B8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -127,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DAF33818A2A2D900282A5F /* main.cpp in Sources */,
-				20DAF34218A2A31D00282A5F /* student.cpp in Sources */,
-				20DAF34518A2A3DC00282A5F /* employee.cpp in Sources */,
+				20B5E39518AC2A4F002EE8B8 /* abstractdatabase.cpp in Sources */,
+				20B5E39618AC2A4F002EE8B8 /* abstractsort.cpp in Sources */,
+				20B5E39818AC2A4F002EE8B8 /* main.cpp in Sources */,
+				20B5E39918AC2A4F002EE8B8 /* student.cpp in Sources */,
+				20B5E39718AC2A4F002EE8B8 /* employee.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

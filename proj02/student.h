@@ -14,12 +14,10 @@
  **
  *******************************************************/
 
-#ifndef __proj02__student__
-#define __proj02__student__
+#ifndef STUDENT_H
+#define	STUDENT_H
 
-#include<iostream>
-#include<vector>
-using namespace std;
+#include <iostream>
 
 /**
     Student
@@ -32,17 +30,21 @@ public:
     /**
         constructor for student
      */
-    Student(unsigned int studentID = 0, string name = "", unsigned int year = 0, float grade = 0.0);
+    Student(unsigned int id = 0, std::string name = "", unsigned int year = 0, float grade = 0.0);
     
     /**
         print data stored in student
      */
-    virtual void print();
+    virtual void print() const;
+    
+    int getGrade() const;
+    std::string getName() const;
+    
     
 protected:
     
-    unsigned int m_studentID;
-    string m_name;
+    unsigned int m_id;
+    std::string m_name;
     unsigned int m_year;
     float m_grade; // GPA
 };
@@ -55,16 +57,16 @@ public:
     /**
         constructor for UndergradStudent
      */
-    UndergradStudent(unsigned int studentID, string name, unsigned int year, float grade, string major = "", string minor = "");
+    UndergradStudent(unsigned int id, std::string name, unsigned int year, float grade, std::string major = "", std::string minor = "");
     
     /**
         print data stored in UndergradStudent
      */
-    virtual void print();
+    virtual void print() const;
     
 private:
-    string m_major;
-    string m_minor;
+    std::string m_major;
+    std::string m_minor;
     
     
 };
@@ -77,19 +79,17 @@ public:
     /**
         constructor for GraduateStudent
      */
-    GraduateStudent(unsigned int studentID, string name, unsigned int year, float grade, string dep = "", string advisor = "");
+    GraduateStudent(unsigned int id, std::string name, unsigned int year, float grade, std::string dep = "", std::string advisor = "");
     
     /**
         print data stored in GraduateStudent
      */
-    virtual void print();
+    virtual void print() const;
     
 private:
-    string m_dep;
-    string m_advisor;
+    std::string m_dep;
+    std::string m_advisor;
 };
 
-
-
-#endif
+#endif	/* STUDENT_H */
 
