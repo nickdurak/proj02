@@ -52,5 +52,9 @@ int main(int argc, char** argv)
     employees->sort(BS); //sorts the database of students using bubblesort
     cout << "Employee database after sort:\n";
     employees->print();
+    
+    delete students;
+    delete employees;
+    delete BS;
 }
 
