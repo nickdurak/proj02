@@ -21,7 +21,7 @@
 using namespace std;
 
 /**
-    constructor for student
+ constructor for student
  */
 Student::Student(unsigned int id, string name, unsigned int year, float grade)
 {
@@ -34,7 +34,7 @@ Student::Student(unsigned int id, string name, unsigned int year, float grade)
 
 
 /**
-    print data stored in student
+ print data stored in student
  */
 void Student::print() const
 {

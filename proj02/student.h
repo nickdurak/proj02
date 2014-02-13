@@ -19,6 +19,7 @@
 
 #include <iostream>
 
+
 /**
     Student
     Purpose: create a student
@@ -28,12 +29,12 @@ class Student
 public:
     
     /**
-        constructor for student
+     constructor for student
      */
     Student(unsigned int id = 0, std::string name = "", unsigned int year = 0, float grade = 0.0);
     
     /**
-        print data stored in student
+     print data stored in student
      */
     virtual void print() const;
     

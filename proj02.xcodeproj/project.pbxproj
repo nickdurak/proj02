@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2052D50518AC7D96003C4569 /* sortfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2052D50318AC7D96003C4569 /* sortfactory.cpp */; };
 		20AF9D7918A81105008C2551 /* input1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20AF9D7718A5419B008C2551 /* input1.txt */; };
 		20AF9D7A18A8110A008C2551 /* input2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20AF9D7818A5419B008C2551 /* input2.txt */; };
 		20B5E39518AC2A4F002EE8B8 /* abstractdatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E38A18AC2A4F002EE8B8 /* abstractdatabase.cpp */; };
@@ -16,6 +17,7 @@
 		20B5E39918AC2A4F002EE8B8 /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E39318AC2A4F002EE8B8 /* student.cpp */; };
 		20B5E39B18AC2B4C002EE8B8 /* input1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20B5E39018AC2A4F002EE8B8 /* input1.txt */; };
 		20B5E39C18AC2B4C002EE8B8 /* input2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20B5E39118AC2A4F002EE8B8 /* input2.txt */; };
+		20B5E39F18AC3A48002EE8B8 /* peoplefactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5E39D18AC3A48002EE8B8 /* peoplefactory.cpp */; };
 		20DAF33A18A2A2D900282A5F /* proj02.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20DAF33918A2A2D900282A5F /* proj02.1 */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2052D50318AC7D96003C4569 /* sortfactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sortfactory.cpp; sourceTree = "<group>"; };
+		2052D50418AC7D96003C4569 /* sortfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sortfactory.h; sourceTree = "<group>"; };
 		20AF9D7718A5419B008C2551 /* input1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input1.txt; sourceTree = "<group>"; };
 		20AF9D7818A5419B008C2551 /* input2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input2.txt; sourceTree = "<group>"; };
 		20B5E38A18AC2A4F002EE8B8 /* abstractdatabase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstractdatabase.cpp; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		20B5E39218AC2A4F002EE8B8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		20B5E39318AC2A4F002EE8B8 /* student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
 		20B5E39418AC2A4F002EE8B8 /* student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = student.h; sourceTree = "<group>"; };
+		20B5E39D18AC3A48002EE8B8 /* peoplefactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = peoplefactory.cpp; sourceTree = "<group>"; };
+		20B5E39E18AC3A48002EE8B8 /* peoplefactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peoplefactory.h; sourceTree = "<group>"; };
 		20DAF33418A2A2D900282A5F /* proj02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj02; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DAF33918A2A2D900282A5F /* proj02.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = proj02.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,10 @@
 				20AF9D7718A5419B008C2551 /* input1.txt */,
 				20AF9D7818A5419B008C2551 /* input2.txt */,
 				20DAF33918A2A2D900282A5F /* proj02.1 */,
+				20B5E39D18AC3A48002EE8B8 /* peoplefactory.cpp */,
+				20B5E39E18AC3A48002EE8B8 /* peoplefactory.h */,
+				2052D50318AC7D96003C4569 /* sortfactory.cpp */,
+				2052D50418AC7D96003C4569 /* sortfactory.h */,
 			);
 			path = proj02;
 			sourceTree = "<group>";
@@ -163,10 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2052D50518AC7D96003C4569 /* sortfactory.cpp in Sources */,
 				20B5E39518AC2A4F002EE8B8 /* abstractdatabase.cpp in Sources */,
 				20B5E39618AC2A4F002EE8B8 /* abstractsort.cpp in Sources */,
 				20B5E39818AC2A4F002EE8B8 /* main.cpp in Sources */,
 				20B5E39918AC2A4F002EE8B8 /* student.cpp in Sources */,
+				20B5E39F18AC3A48002EE8B8 /* peoplefactory.cpp in Sources */,
 				20B5E39718AC2A4F002EE8B8 /* employee.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@ class AbstractSort
 public:
     AbstractSort() {}
     virtual void sort(AbstractDatabase*) = 0;
-    virtual ~AbstractSort();
+    virtual ~AbstractSort() {}
 
 };
 
@@ -24,7 +24,7 @@ class BubbleSort : public AbstractSort
 public:
     BubbleSort() {}
     virtual void sort(AbstractDatabase*);
-    virtual ~BubbleSort();
+    virtual ~BubbleSort() {}
 };
 
 #endif	/* ABSTRACTSORT_H */

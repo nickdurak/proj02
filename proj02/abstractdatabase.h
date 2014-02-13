@@ -19,14 +19,13 @@ class AbstractDatabase
 {
     
 public:
-    virtual void buildDatabase(std::string) = 0;
     virtual void swap(int,int) = 0;
     virtual bool compare(int,int) = 0;
     virtual void sort(AbstractSort*) = 0;
     virtual void print() = 0;
     virtual int getSize() = 0;
     AbstractDatabase() {}
-    virtual ~AbstractDatabase();
+    virtual ~AbstractDatabase() {}
     
 };
 
@@ -35,7 +34,7 @@ class StudentDatabase : public AbstractDatabase
     
 public:
     virtual int getSize();
-    virtual void buildDatabase(std::string);
+    void push(Student*);
     virtual void swap(int,int);
     virtual bool compare(int,int);
     virtual void sort(AbstractSort*);
@@ -45,6 +44,7 @@ public:
     
 private:
     std::vector<Student*> students;
+
 };
 
 class EmployeeDatabase : public AbstractDatabase
@@ -52,7 +52,7 @@ class EmployeeDatabase : public AbstractDatabase
     
 public:
     virtual int getSize();
-    virtual void buildDatabase(std::string);
+    void push(Employee*);
     virtual void swap(int,int);
     virtual bool compare(int,int);
     virtual void sort(AbstractSort*);

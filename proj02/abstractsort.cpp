@@ -10,19 +10,11 @@
 
 using namespace std;
 
-AbstractSort::~AbstractSort()
-{
-    delete this;
-}
+
 
 void BubbleSort::sort(AbstractDatabase* database)
 {
     for(int i = database->getSize()-1; i > 0; --i)
         for(int j = 0; j < i; j++)
             if(database->compare(j, i)) database->swap(j, i);
-}
-
-BubbleSort::~BubbleSort()
-{
-    delete this;
 }

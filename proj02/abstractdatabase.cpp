@@ -19,56 +19,10 @@
 using namespace std;
 
 
-AbstractDatabase::~AbstractDatabase()
-{
-    delete this;
-}
 
-
-void StudentDatabase::buildDatabase(string file)
+void StudentDatabase::push(Student* student)
 {
-    string line = "";
-    unsigned int id = 0;
-    unsigned int year = 0;
-    float grade = 0;
-    string name = "";
-    string major = "";
-    string minor = "";
-    string dep = "";
-    string advisor = "";
-    string dummy = "";
-    ifstream studentFile (file);
-    
-    
-    if (studentFile.is_open())
-    {
-        while (getline (studentFile, line))
-        {
-            if (line[0] == 'U')
-            {
-                stringstream undergradStream;
-                undergradStream << line;
-                
-                
-                undergradStream >> dummy >> id >> name >> year >> grade >> major >> minor;
-                
-                students.push_back(new UndergradStudent(id, name, year, grade, major, minor));
-                
-            }
-            
-            if (line[0] == 'G')
-            {
-                stringstream graduateStream;
-                graduateStream << line;
-                
-                graduateStream >> dummy >> id >> name >> year >> grade >> dep >> advisor;
-                
-                students.push_back(new GraduateStudent(id, name, year, grade, dep, advisor));
-            }
-        }
-    }
-    
-    studentFile.close();
+    students.push_back(student);
 }
 
 int StudentDatabase::getSize()
@@ -103,8 +57,9 @@ void StudentDatabase::sort(AbstractSort *sortType)
 
 void StudentDatabase::print()
 {
-    for(unsigned int i = 0; i < students.size(); i++){
-            students[i]->print();	
+    for(int i = students.size() - 1; i >= 0; --i)
+    {
+        students[i]->print();
     }
 }
 
@@ -118,55 +73,15 @@ StudentDatabase::~StudentDatabase()
          students.pop_back();
          delete tmp;
     }
-    
-    delete this;
+
 }
 
 
 
 
-void EmployeeDatabase::buildDatabase(string file)
+void EmployeeDatabase::push(Employee* employee)
 {
-    ifstream employeeFile (file);
-    string line = "";
-    unsigned int id = 0;
-    unsigned int year = 0;
-    float grade = 0;
-    string dep = "";
-    string name = "";
-    unsigned int salary = 0;
-    unsigned int numStudents = 0;
-    string dummy = "";
-    
-    
-    if (employeeFile.is_open())
-    {
-        while (getline (employeeFile, line))
-        {
-            if (line[0] == 'F')
-            {
-                stringstream facultyStream;
-                facultyStream << line;
-                
-                facultyStream >> dummy >> id >> name >> salary >> year >> numStudents;
-                
-                employees.push_back(new Faculty(id, name, salary, year, numStudents));
-                
-            }
-            
-            if (line[0] == 'S')
-            {
-                stringstream staffStream;
-                staffStream << line;
-                
-                staffStream >> dummy >> id >> name >> salary >> year >> numStudents;
-                
-                employees.push_back(new Staff(id, name, salary, year, dep));
-            }
-        }
-    }
-    
-    employeeFile.close();
+    employees.push_back(employee);
 }
 
 void EmployeeDatabase::swap(int i, int j)
@@ -200,9 +115,9 @@ void EmployeeDatabase::sort(AbstractSort *sortType)
 
 void EmployeeDatabase::print()
 {
-    for(unsigned int i = 0; i < employees.size(); i++)
+    for(int i = employees.size() - 1; i >= 0; --i)
     {
-         employees[i]->print();	
+         employees[i]->print();
     }
 }
 
@@ -216,6 +131,4 @@ EmployeeDatabase::~EmployeeDatabase()
         employees.pop_back();
         delete tmp;
     }
-    
-    delete this;
 }
