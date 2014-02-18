@@ -1,19 +1,29 @@
-//
-//  peoplefactory.h
-//  proj02
-//
-//  Created by Nick Durak on 2/12/14.
-//  Copyright (c) 2014 Nick Durak. All rights reserved.
-//
+/******************************************************
+ ** FILE: sortfactory.h
+ **
+ ** ABSTRACT:
+ ** Provides declaration of the Student, UndergradStudent,
+ ** and GraduateStudent classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 12/02/2014
+ **
+ *******************************************************/
 
 #ifndef __proj02__peoplefactory__
 #define __proj02__peoplefactory__
 
 #include <iostream>
 
-
 class AbstractDatabase;
 
+/*
+ PeopleFactory...class with interface for people factories
+ */
 class PeopleFactory
 {
 public:
@@ -22,15 +32,20 @@ public:
     virtual ~PeopleFactory() {}
 };
 
+/*
+ StudentFactory...class for building student database
+ */
 class StudentFactory : public PeopleFactory
 {
 public:
     virtual AbstractDatabase* load(std::string);
     StudentFactory() {}
     virtual ~StudentFactory() {}
-    
 };
 
+/*
+ EmployeeFactory...class for building employee database
+ */
 class EmployeeFactory : public PeopleFactory
 {
 public:

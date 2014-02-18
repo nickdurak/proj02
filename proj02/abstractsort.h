@@ -1,9 +1,18 @@
-/* 
- * File:   abstractsort.h
- * Author: njd
- *
- * Created on February 11, 2014, 3:33 PM
- */
+/******************************************************
+ ** FILE: abstractsort.h
+ **
+ ** ABSTRACT:
+ ** Provides declarations for the AbstractSort
+ ** and BubbleSort classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 11/02/2014
+ **
+ *******************************************************/
 
 #ifndef ABSTRACTSORT_H
 #define	ABSTRACTSORT_H

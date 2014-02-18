@@ -1,9 +1,18 @@
-/* 
- * File:   abstractdatabase.cpp
- * Author: njd
- * 
- * Created on February 11, 2014, 2:20 PM
- */
+/******************************************************
+ ** FILE: abstractdatabase.cpp
+ **
+ ** ABSTRACT:
+ ** Provides implementation of the StudentDatabase,
+ ** and EmployeeDatabase classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 11/02/2014
+ **
+ *******************************************************/
 
 #include <iostream>
 #include <sstream>

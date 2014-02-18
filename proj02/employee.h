@@ -1,3 +1,19 @@
+/******************************************************
+ ** FILE: employee.h
+ **
+ ** ABSTRACT:
+ ** Provides declaration of the Employee, Faculty,
+ ** and Staff classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 05/02/2014
+ **
+ *******************************************************/
+
 #ifndef EMPLOYEE_H
 #define	EMPLOYEE_H
 

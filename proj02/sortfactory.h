@@ -1,10 +1,18 @@
-//
-//  sortfactory.h
-//  proj02
-//
-//  Created by Nick Durak on 2/12/14.
-//  Copyright (c) 2014 Nick Durak. All rights reserved.
-//
+/******************************************************
+ ** FILE: sortfactory.cpp
+ **
+ ** ABSTRACT:
+ ** Provides implementation of the Student, UndergradStudent,
+ ** and GraduateStudent classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 12/02/2014
+ **
+ *******************************************************/
 
 #ifndef __proj02__sortfactory__
 #define __proj02__sortfactory__
@@ -13,6 +21,9 @@
 
 class AbstractSort;
 
+/*
+ SortFactory...class used as interface for a sort factory
+ */
 class SortFactory
 {
 public:
@@ -21,6 +32,9 @@ public:
     virtual ~SortFactory() {}
 };
 
+/*
+ BubbleSortFactory...class that creats a bubblesort object
+ */
 class BubbleSortFactory : public SortFactory
 {
 public:

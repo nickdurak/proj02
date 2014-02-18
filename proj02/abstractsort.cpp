@@ -1,9 +1,19 @@
-/* 
- * File:   abstractsort.cpp
- * Author: njd
- * 
- * Created on February 11, 2014, 3:33 PM
- */
+/******************************************************
+ ** FILE: abstractsort.cpp
+ **
+ ** ABSTRACT:
+ ** Provides implementation of BubbleSort class
+ ** 
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 11/02/2014
+ **
+ *******************************************************/
+
 
 #include "abstractsort.h"
 #include "abstractdatabase.h"

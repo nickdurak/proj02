@@ -1,9 +1,18 @@
-/* 
- * File:   abstractdatabase.h
- * Author: njd
- *
- * Created on February 11, 2014, 2:05 PM
- */
+/******************************************************
+ ** FILE: abstractdatabase.h
+ **
+ ** ABSTRACT:
+ ** Provides declarations for AbstractDatabase, StudentDatabase,
+ ** and EmployeeDatabase classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 11/02/2014
+ **
+ *******************************************************/
 
 #ifndef ABSTRACTDATABASE_H
 #define	ABSTRACTDATABASE_H
@@ -32,7 +41,7 @@ public:
 };
 
 /*
- StudentDatabase class to store a list of students
+ StudentDatabase...class to store a list of students
  */
 class StudentDatabase : public AbstractDatabase
 {
@@ -51,7 +60,7 @@ private:
 };
 
 /*
- EmployeeDatabase class to store a list of employees
+ EmployeeDatabase...class to store a list of employees
  */
 class EmployeeDatabase : public AbstractDatabase
 {

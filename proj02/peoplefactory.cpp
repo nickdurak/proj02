@@ -1,10 +1,18 @@
-//
-//  peopleFactory.cpp
-//  proj02
-//
-//  Created by Nick Durak on 2/12/14.
-//  Copyright (c) 2014 Nick Durak. All rights reserved.
-//
+/******************************************************
+ ** FILE: peoplefactory.cpp
+ **
+ ** ABSTRACT:
+ ** Provides implementation of the StudentFactory
+ ** and EmployeeFactory classes.
+ **
+ ** AUTHOR:
+ ** Nick Durak
+ ** Barend Ungrodt
+ **
+ ** CREATION DATE:
+ ** 12/02/2014
+ **
+ *******************************************************/
 
 #include <fstream>
 #include <sstream>
@@ -18,8 +26,13 @@
 
 using namespace std;
 
+/*
+ loads a student database from an input file.  Takes in the name
+ of the input file as a parameter
+ */
 AbstractDatabase* StudentFactory::load(string file)
 {
+    // create StudentDatabase to fill
     StudentDatabase* students = new StudentDatabase();
     
     string line = "";
@@ -34,23 +47,23 @@ AbstractDatabase* StudentFactory::load(string file)
     string dummy = "";
     ifstream studentFile (file);
     
-    
+    // checks if file is open
     if (studentFile.is_open())
     {
+        // reads the file line by line
         while (getline (studentFile, line))
         {
+            // adds a UndergradStudent to students
             if (line[0] == 'U')
             {
                 stringstream undergradStream;
                 undergradStream << line;
                 
-                
                 undergradStream >> dummy >> id >> name >> year >> grade >> major >> minor;
                 
                 students->push(new UndergradStudent(id, name, year, grade, major, minor));
-                
             }
-            
+            // adds a GraduateStudent to students
             if (line[0] == 'G')
             {
                 stringstream graduateStream;
@@ -68,8 +81,14 @@ AbstractDatabase* StudentFactory::load(string file)
     return students;
 }
 
+
+/*
+ loads a employee database from an input file.  Takes in the name
+ of the input file as a parameter
+ */
 AbstractDatabase* EmployeeFactory::load(string file)
 {
+    // create EmployeeDatabase to fill
     EmployeeDatabase* employees = new EmployeeDatabase();
     
     ifstream employeeFile (file);
@@ -83,11 +102,13 @@ AbstractDatabase* EmployeeFactory::load(string file)
     unsigned int numStudents = 0;
     string dummy = "";
     
-    
+    // checks if file is open
     if (employeeFile.is_open())
     {
+        // reads the file line by line
         while (getline (employeeFile, line))
         {
+            // adds a Faculty to employees
             if (line[0] == 'F')
             {
                 stringstream facultyStream;
@@ -98,7 +119,7 @@ AbstractDatabase* EmployeeFactory::load(string file)
                 employees->push(new Faculty(id, name, year, salary, numStudents));
                 
             }
-            
+            // adds a Staff to employees
             if (line[0] == 'S')
             {
                 stringstream staffStream;
