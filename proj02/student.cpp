@@ -40,12 +40,16 @@ void Student::print() const
 {
     cout << m_id << " " << m_name << " " << m_year << " " << m_grade;
 }
-
+/*
+ return grade
+ */
 int Student::getGrade() const
 {
     return m_grade;
 }
-
+/*
+ return name
+ */
 string Student::getName() const
 {
     return m_name;

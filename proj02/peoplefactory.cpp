@@ -93,9 +93,9 @@ AbstractDatabase* EmployeeFactory::load(string file)
                 stringstream facultyStream;
                 facultyStream << line;
                 
-                facultyStream >> dummy >> id >> name >> salary >> year >> numStudents;
+                facultyStream >> dummy >> id >> name >> year >> salary >> numStudents;
                 
-                employees->push(new Faculty(id, name, salary, year, numStudents));
+                employees->push(new Faculty(id, name, year, salary, numStudents));
                 
             }
             
@@ -104,9 +104,9 @@ AbstractDatabase* EmployeeFactory::load(string file)
                 stringstream staffStream;
                 staffStream << line;
                 
-                staffStream >> dummy >> id >> name >> salary >> year >> numStudents;
+                staffStream >> dummy >> id >> name >> year >> salary >> dep;
                 
-                employees->push(new Staff(id, name, salary, year, dep));
+                employees->push(new Staff(id, name, year, salary, dep));
             }
         }
     }

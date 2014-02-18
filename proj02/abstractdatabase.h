@@ -15,9 +15,11 @@ class Student;
 class Employee;
 class AbstractSort;
 
+/*
+ AbstractDatabase class interface
+ */
 class AbstractDatabase
 {
-    
 public:
     virtual void swap(int,int) = 0;
     virtual bool compare(int,int) = 0;
@@ -29,9 +31,11 @@ public:
     
 };
 
+/*
+ StudentDatabase class to store a list of students
+ */
 class StudentDatabase : public AbstractDatabase
 {
-    
 public:
     virtual int getSize();
     void push(Student*);
@@ -44,12 +48,13 @@ public:
     
 private:
     std::vector<Student*> students;
-
 };
 
+/*
+ EmployeeDatabase class to store a list of employees
+ */
 class EmployeeDatabase : public AbstractDatabase
 {
-    
 public:
     virtual int getSize();
     void push(Employee*);

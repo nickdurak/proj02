@@ -10,17 +10,8 @@
 class Employee
 {
 public:
-    
-    /**
-     constructor for Employee
-     */
-    Employee(unsigned int id = 0, std::string name = "", unsigned int salary = 0, unsigned int year = 0);
-    
-    /**
-     print data stored in Employee
-     */
+    Employee(unsigned int id = 0, std::string name = "", unsigned int year = 0, unsigned int salary = 0);
     virtual void print() const;
-    
     int getSalary() const;
     int getYear() const;
     
@@ -39,21 +30,11 @@ protected:
 class Faculty: public Employee
 {
 public:
-    
-    /**
-     constructor for Faculty
-     */
-    Faculty(unsigned int id, std::string name, unsigned int salary, unsigned int year, unsigned int numStudents = 0);
-    
-    /**
-     print data stored in Faculty
-     */
+    Faculty(unsigned int id, std::string name, unsigned int year, unsigned int salary, unsigned int numStudents = 0);
     virtual void print() const;
     
 private:
     unsigned int m_numStudents;
-    
-    
 };
 
 /**
@@ -63,18 +44,9 @@ private:
 class Staff: public Employee
 {
 public:
-    
-    /**
-     constructor for Staff
-     */
-    Staff(unsigned int id, std::string name, unsigned int salary, unsigned int year, std::string dep = "");
-    
-    /**
-     print data stored in Staff
-     */
+    Staff(unsigned int id, std::string name, unsigned int year, unsigned int salary, std::string dep = "");
     virtual void print() const;
 
-    
 private:
     std::string m_dep;
 };

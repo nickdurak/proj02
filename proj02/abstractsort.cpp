@@ -11,7 +11,9 @@
 using namespace std;
 
 
-
+/*
+ sorts database using bubblesort
+ */
 void BubbleSort::sort(AbstractDatabase* database)
 {
     for(int i = database->getSize()-1; i > 0; --i)

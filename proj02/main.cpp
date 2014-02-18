@@ -23,36 +23,41 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) 
+int main(int argc, char* argv[])
 {
-    string studentFile = "input1.txt";
-    string employeeFile = "input2.txt";
+    // read in strings from command line
+    if(argc != 3)
+    {
+		cerr << "Incorrect nubmer of command line arguments." << endl;
+		cerr << "Usage: " << argv[0] << " <first_input_file> <second_input_file>" << endl;
+		exit(EXIT_FAILURE);
+	}
     
+	string first_input_file = argv[1];    // first input file, should be an input file of students
+	string second_input_file = argv[2];   // second input file, should be an input file of employees
+
+    // create factory objects
     StudentFactory studentFactory;
     EmployeeFactory employeeFactory;
     BubbleSortFactory bubbleSortFactory;
     
-    AbstractDatabase* students = studentFactory.load(studentFile);
-    AbstractDatabase* employees = employeeFactory.load(employeeFile);
+    
+    // use factory to build database objects and sort object
+    AbstractDatabase* students = studentFactory.load(first_input_file);
+    AbstractDatabase* employees = employeeFactory.load(second_input_file);
     AbstractSort* BS = bubbleSortFactory.create();
     
-    cout << "Student database prior to sort:\n";
-    students->print();
-    cout << endl;
     students->sort(BS); //sorts the database of students using bubblesort
-    cout << "Student database after sort:\n";
-    students->print();
+    cout << "The list of students are :\n";
+    students->print(); //prints database of students
+    
     cout << endl;
     
-    cout << "**************************************************\n";
+    employees->sort(BS); //sorts the database of employeess using bubblesort
+    cout << "The list of employees are :\n";
+    employees->print(); //prints database of employees
     
-    cout << "Employee database prior to sort:\n";
-    employees->print();
-    cout << endl;
-    employees->sort(BS); //sorts the database of students using bubblesort
-    cout << "Employee database after sort:\n";
-    employees->print();
-    
+    //free up memory
     delete students;
     delete employees;
     delete BS;

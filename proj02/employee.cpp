@@ -22,7 +22,7 @@ using namespace std;
 /**
  constructor for Employee
  */
-Employee::Employee(unsigned int id, string name, unsigned int salary, unsigned int year)
+Employee::Employee(unsigned int id, string name, unsigned int year, unsigned int salary)
 {
     m_id = id;
     m_name = name;
@@ -35,14 +35,20 @@ Employee::Employee(unsigned int id, string name, unsigned int salary, unsigned i
  */
 void Employee::print() const
 {
-    cout << m_id << " " << m_name << " " << m_salary << " " << m_year;
+    cout << m_id << " " << m_name << " " << m_year << " " << m_salary;
 }
 
+/*
+ return the salary
+ */
 int Employee::getSalary() const
 {
     return m_salary;
 }
 
+/*
+ return the year
+ */
 int Employee::getYear() const
 {
     return m_year;
@@ -53,8 +59,8 @@ int Employee::getYear() const
 /**
  constructor for Faculty
  */
-Faculty::Faculty(unsigned int id, string name, unsigned int salary, unsigned int year, unsigned int numStudents)
-: Employee(id, name, salary, year)
+Faculty::Faculty(unsigned int id, string name, unsigned int year, unsigned int salary, unsigned int numStudents)
+: Employee(id, name, year, salary)
 {
     m_numStudents = numStudents;
 }
@@ -72,8 +78,8 @@ void Faculty::print() const
 /**
  constructor for Staff
  */
-Staff::Staff(unsigned int id, string name, unsigned int salary, unsigned int year, string dep)
-: Employee(id, name, salary, year)
+Staff::Staff(unsigned int id, string name, unsigned int year, unsigned int salary, string dep)
+: Employee(id, name, year, salary)
 {
     m_dep = dep;
 }

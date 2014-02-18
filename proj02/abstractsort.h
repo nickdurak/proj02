@@ -10,6 +10,9 @@
 
 class AbstractDatabase;
 
+/*
+ AbstractSort...class used as interface for sort
+ */
 class AbstractSort 
 {
 public:
@@ -19,6 +22,9 @@ public:
 
 };
 
+/*
+ BubbleSort...class used to implement sort using bubble sort
+ */
 class BubbleSort : public AbstractSort
 {
 public:
